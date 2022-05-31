@@ -72,6 +72,7 @@ generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
+  // added my new function to also run to get the correct user inputs required to create the password
   userInput();
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
