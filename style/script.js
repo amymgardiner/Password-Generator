@@ -13,7 +13,7 @@ var specialArr = ['!', '"', '#', '$', '%', '&', '(', ')', '*', '+', '-', '.', '/
 
 function generatePassword() {
 
-  var password = "";
+  var newPassword = "";
   
   // forloop to run as many times as the user said the passwordLength needs to be, each time it runs it selects a new character from the charsArr based off the userInput function until it will finally generate a password that meets the user's requirements
   for (var i = 0; i < passwordLength; i++) {
