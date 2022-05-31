@@ -11,20 +11,6 @@ var numericArr = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 // array for special characters to be used in the charsArr
 var specialArr = ['!', '"', '#', '$', '%', '&', '(', ')', '*', '+', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', '^', '_', '`', '{', '|', '}', '~'];
 
-function generatePassword() {
-
-  var newPassword = "";
-  
-  // forloop to run as many times as the user said the passwordLength needs to be, each time it runs it selects a new character from the charsArr based off the userInput function until it will finally generate a password that meets the user's requirements
-  for (var i = 0; i < passwordLength; i++) {
-    var randomCharacter = Math.floor(Math.random() * charsArr);
-    newPassword = newPassword + charsArr[randomCharacter];  
-  }
-
-  // final new password
-  return newPassword;
-}
-
 // Questions to prompt the user for password requirements; how long should the password be, does it need uppercase letters, does it need lowercase letters, does it need any numbers, and does it need any special characters
 function userInput() {
   passwordLength = parseInt(prompt("What is the required length of your password? Pick a number between 8 and 128?", "8"));
@@ -38,24 +24,44 @@ function userInput() {
   // check to see if password needs lowercase letters
   if(confirm("Should your password include lowercase characters?")) {
     charsArr = charsArr.concat(lowerCaseArr);
+    console.log(charsArr);
   }
 
   // check to see if password needs uppercase letters
   if(confirm("Should your password include uppercase characters?")) {
     charsArr = charsArr.concat(upperCaseArr);
+    console.log(charsArr);
   }
 
   // check to see if password needs numbers in it
   if(confirm("Should your password include numeric characters?")) {
     charsArr = charsArr.concat(numericArr);
+    console.log(charsArr);
   }
 
   // check to see if password needs special characters in it
   if(confirm("Should your password include special characters?")) {
     charsArr = charsArr.concat(specialArr);
+    console.log(charsArr);
   }
 
   return true;
+}
+
+function generatePassword() {
+
+  var newPassword = "";
+  
+  // forloop to run as many times as the user said the passwordLength needs to be, each time it runs it selects a new character from the charsArr based off the userInput function until it will finally generate a password that meets the user's requirements
+  for(var i = 0; i < passwordLength; i++) {
+    var randomCharacter = Math.floor(Math.random() * charsArr.length);
+    console.log(randomCharacter);
+    newPassword = newPassword + charsArr[randomCharacter];
+    console.log(newPassword); 
+  }
+
+  // final new password
+  return newPassword;
 }
 
 // Get references to the #generate element
