@@ -9,6 +9,10 @@ var numericArr = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 var specialArr = ['!', '"', '#', '$', '%', '&', '(', ')', '*', '+', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', '^', '_', '`', '{', '|', '}', '~'];
 
 function generatePassword() {
+  for (let i = 0; i < passwordLength; i++) {
+    const element = array[index];
+    
+  }
 
 }
 
@@ -57,6 +61,7 @@ generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
+  userInput();
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
