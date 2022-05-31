@@ -18,29 +18,29 @@ function userInput() {
   // check to make sure user input for password length is correct
   if(passwordLength < 8 || passwordLength > 128) {
     alert("Please select a password length between 8 and 128.")
-    return false;
+    return userInput();
   }
 
   // check to see if password needs lowercase letters
-  if(confirm("Should your password include lowercase characters?")) {
+  if(confirm("Should your password include lowercase characters? Select 'OK' for yes and 'Cancel' for no.")) {
     charsArr = charsArr.concat(lowerCaseArr);
     console.log(charsArr);
   }
 
   // check to see if password needs uppercase letters
-  if(confirm("Should your password include uppercase characters?")) {
+  if(confirm("Should your password include uppercase characters? Select 'OK' for yes and 'Cancel' for no.")) {
     charsArr = charsArr.concat(upperCaseArr);
     console.log(charsArr);
   }
 
   // check to see if password needs numbers in it
-  if(confirm("Should your password include numeric characters?")) {
+  if(confirm("Should your password include numeric characters? Select 'OK' for yes and 'Cancel' for no.")) {
     charsArr = charsArr.concat(numericArr);
     console.log(charsArr);
   }
 
   // check to see if password needs special characters in it
-  if(confirm("Should your password include special characters?")) {
+  if(confirm("Should your password include special characters? Select 'OK' for yes and 'Cancel' for no.")) {
     charsArr = charsArr.concat(specialArr);
     console.log(charsArr);
   }
