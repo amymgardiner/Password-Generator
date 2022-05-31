@@ -23,27 +23,39 @@ function userInput() {
   }
 
   // check to see if password needs lowercase letters
-  if(confirm("Should your password include lowercase characters? Select 'OK' for yes and 'Cancel' for no.")) {
+  if(confirm("Should your password include lowercase characters? Select 'OK' for yes and 'Cancel' for no.") === true) {
     charsArr = charsArr.concat(lowerCaseArr);
-    console.log(charsArr);
+    alert("Your password will include lowercase characters.");
+  }
+  else {
+    alert("Your password will not include lowercase characters.");
   }
 
   // check to see if password needs uppercase letters
-  if(confirm("Should your password include uppercase characters? Select 'OK' for yes and 'Cancel' for no.")) {
+  if(confirm("Should your password include uppercase characters? Select 'OK' for yes and 'Cancel' for no.") === true) {
     charsArr = charsArr.concat(upperCaseArr);
-    console.log(charsArr);
+    alert("Your password will include uppercase characters.");
+  }
+  else {
+    alert("Your password will not include uppercase characters.");
   }
 
   // check to see if password needs numbers in it
-  if(confirm("Should your password include numeric characters? Select 'OK' for yes and 'Cancel' for no.")) {
+  if(confirm("Should your password include numeric characters? Select 'OK' for yes and 'Cancel' for no.") === true) {
     charsArr = charsArr.concat(numericArr);
-    console.log(charsArr);
+    alert("Your password will include numeric characters.");
+  }
+  else {
+    alert("Your password will not include numeric characters.");
   }
 
   // check to see if password needs special characters in it
-  if(confirm("Should your password include special characters? Select 'OK' for yes and 'Cancel' for no.")) {
+  if(confirm("Should your password include special characters? Select 'OK' for yes and 'Cancel' for no.") === true) {
     charsArr = charsArr.concat(specialArr);
-    console.log(charsArr);
+    alert("Your password will include special characters.");
+  }
+  else {
+    alert("Your password will not include special characters.");
   }
 
   return true;
