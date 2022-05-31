@@ -13,12 +13,16 @@ var specialArr = ['!', '"', '#', '$', '%', '&', '(', ')', '*', '+', '-', '.', '/
 
 function generatePassword() {
 
+  var password = "";
+  
   // forloop to run as many times as the user said the passwordLength needs to be, each time it runs it selects a new character from the charsArr based off the userInput function until it will finally generate a password that meets the user's requirements
   for (var i = 0; i < passwordLength; i++) {
-    var element = array[index];
-    
+    var randomCharacter = Math.floor(Math.random() * charsArr);
+    newPassword = newPassword + charsArr[randomCharacter];  
   }
 
+  // final new password
+  return newPassword;
 }
 
 // Questions to prompt the user for password requirements; how long should the password be, does it need uppercase letters, does it need lowercase letters, does it need any numbers, and does it need any special characters
@@ -53,10 +57,6 @@ function userInput() {
 
   return true;
 }
-
-
-
-
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
