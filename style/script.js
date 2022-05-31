@@ -1,4 +1,5 @@
 // Assignment code here
+
 var passwordLength = "";
 var charsArr = [];
 
@@ -15,7 +16,7 @@ var specialArr = ['!', '"', '#', '$', '%', '&', '(', ')', '*', '+', '-', '.', '/
 function userInput() {
   passwordLength = parseInt(prompt("What is the required length of your password? Pick a number between 8 and 128?", "8"));
 
-  // check to make sure user input for password length is correct
+  // check to make sure user input for password length is correct, start function over if not between 8-128
   if(passwordLength < 8 || passwordLength > 128) {
     alert("Please select a password length between 8 and 128.")
     return userInput();
@@ -60,20 +61,21 @@ function generatePassword() {
     console.log(newPassword); 
   }
 
-  // final new password
+  // final password
   return newPassword;
 }
 
-// Get references to the #generate element
+// Get references to the #generate element - existing code from challenge
 var generateBtn = document.querySelector("#generate");
 
-// Add event listener to generate button
+// Add event listener to generate button - existing code from challenge
 generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
   // added my new function to also run to get the correct user inputs required to create the password
   userInput();
+  // existing code from challenge
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
