@@ -21,6 +21,9 @@ function userInput() {
     alert("Please select a password length between 8 and 128.")
     return userInput();
   }
+  else {
+    alert(passwordLength + " : will be the number of characters in your password.");
+  }
 
   // check to see if password needs lowercase letters
   if(confirm("Should your password include lowercase characters? Select 'OK' for yes and 'Cancel' for no.") === true) {
