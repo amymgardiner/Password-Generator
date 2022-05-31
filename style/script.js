@@ -12,8 +12,10 @@ var numericArr = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 var specialArr = ['!', '"', '#', '$', '%', '&', '(', ')', '*', '+', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', '^', '_', '`', '{', '|', '}', '~'];
 
 function generatePassword() {
-  for (let i = 0; i < passwordLength; i++) {
-    const element = array[index];
+
+  // forloop to run as many times as the user said the passwordLength needs to be, each time it runs it selects a new character from the charsArr based off the userInput function until it will finally generate a password that meets the user's requirements
+  for (var i = 0; i < passwordLength; i++) {
+    var element = array[index];
     
   }
 
